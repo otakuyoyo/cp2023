@@ -2,6 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -141,10 +142,130 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Brython.html'>Next</a> >> Brython<br /><h1>bout</h1>
-<p><a href="https://github.com/mdecycu/cmsite"> https://github.com/mdecycu/cmsite </a></p>
-<p></p>
-<br /> <a href='Brython.html'>Next</a> >> Brython</div>
+    <div id="tipue_search_content">Brython << <a href='Brython.html'>Previous</a> <a href='w5.html'>Next</a> >> w5<br /><h1>W3</h1>
+<p>利用已經帶有 Brython 執行環境的倉儲, 在設定學員 Github Classroom 首次作業時, 即經由 template 置入, 因此學員只要:</p>
+<p>利用學校 email 帳號, 建立 Github 帳號, 以英文姓名縮寫加上一組數字, 選擇最短帳號名稱 例如: jfk40723199, jfk 為其自選的姓名縮寫, 而隨後則加上各自的學號.</p>
+<p>擁有 Github 帳號後, 即可透過 Github Classroom assignment 連結取得作業倉儲, 自行在倉儲中設定 Github Pages 後, 即可啟用作業網站 (以下<span> </span><span>所謂<span>網站均指靜態網站</span><span> </span></span>, 而用來編輯網站內容的<span>動態網站, 則統稱為網際內容編輯器</span>, 使用動態網站的目的在編輯靜態網站的內容). 網站內容經過編輯之後, 必須建立新的網站內容 (使用 generate_pages), 然後將新的網站內容更新到對應的 Github 倉儲中 (稱為改版, 其過程經歷 git add, git commit 與 git push 等階段).</p>
+<p>git 為分散式版次管理系統工具.</p>
+<p>git add</p>
+<p>git commit</p>
+<p>git push</p>
+<p>採用 Github Classroom 建立作業倉儲的問題:</p>
+<p>2023/09/26 在 1a w3 課程進行到建立各學員 site 作業時發現, 將 Replit 導入 Github 倉儲的流程中, 所產生的系統間權限設定, 必須由 Github Classroom 管理帳號 (以 cp2023 為例, 附屬在 mdecp2023 帳號下), 針對各用戶所提出的個別 Replit 權限 requests (以 site-scrum-1 倉儲為例, 只能透過 Replit 提出控管 mdecp2023/site-scrum-1 倉儲的權限)<span> </span><span>逐一進行設定</span>.</p>
+<p><img alt="" height="400" src="https://mde.tw/cpnote/images/mdecp2023_replit_requests.png" width="516"/></p>
+<p>(上圖顯示共有三名用戶針對 mdecp2023 帳號下的 Github Classroom 倉儲提出 Replit 連線要求, 其中只有最上方用戶的 request 取得 mdecp2023/site-scrum-1 倉儲的維護權限, 其餘兩則 requests 則仍處於待審核階段. 意即若要讓各用戶整合 Replit,<span> </span><span>每一個 Github Classroom 作業, 管理者都必須手動處理超過兩百則的 requests</span>)</p>
+<p>為去除管理者的手動設定負擔, 決定 2023 cp 與 cad 等課程將放棄使用 Github Classroom. 改為由各學員自行針對課程建立用來評分的課程倉儲與網站 (cp 課程建立 cp2023 倉儲, cad 課程則建立 cad2023 倉儲), 直接附屬在學員的 Github 帳號下, 後續的 submodule 設定與倉儲協同權限則統一由各學員自行負責</p>
+<!-- 導入 brython 程式庫 -->
+<p>
+<script src="./../cmsimde/static/brython.js"></script>
+<script src="./../cmsimde/static/brython_stdlib.js"></script>
+</p>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+</script>
+</p>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="./../cmsimde/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="./../cmsimde/static/ace/filereader.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="./../cmsimde/static/ace/ace.js" type="text/javascript"></script>
+<script src="./../cmsimde/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="./../cmsimde/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="./../cmsimde/static/ace/snippets/python.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="./../cmsimde/static/Cango-24v03-min.js"></script>
+<script src="./../cmsimde/static/gearUtils-09.js"></script>
+<script src="./../cmsimde/static/SVGpathUtils-6v03-min.js"></script>
+<script src="./../cmsimde/static/sylvester.js"></script>
+<script src="./../cmsimde/static/PrairieDraw.js"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src1"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+</script>
+</p>
+<p>
+<script type="text/python3">
+from browser import document as doc
+import ace
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run1():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace1.editor.setValue(prog)
+    Ace1.editor.scrollToRow(0)
+    Ace1.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace1.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run1'].bind('click', Ace1.run)
+doc['kw_show_console1'].bind('click', Ace1.show_console)
+doc['kw_clear_console1'].bind('click', Ace1.clear_console)
+doc['clear_bd1'].bind('click', clear_bd1)
+# 呼叫函式執行
+run1()
+</script>
+</p>
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace2 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
+
+# 從 gist 取得程式碼
+add_src = open(add1to100_url).read()
+def add(ev):
+    Ace2.editor.setValue(add_src)
+    Ace2.editor.scrollToRow(0)
+    Ace2.editor.gotoLine(0)
+    Ace2.run()
+
+# id 為 "add1to100" 的按鈕點按時, 執行 add 方法
+doc["add1to100"].bind('click', add)
+</script>
+</p>
+<p><!-- add 1 to 100 結束--></p>
+<!-- editor1 開始 -->
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor1" style="width: 600px; height: 300px;">
+<br />Brython << <a href='Brython.html'>Previous</a> <a href='w5.html'>Next</a> >> w5</div>
         
     <!-- footer -->
       <div class="container">
