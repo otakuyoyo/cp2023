@@ -885,8 +885,37 @@ void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
 <div class="line number17 index16 alt2"><code class="cpp spaces">  </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
 <div class="line number18 index17 alt1"><code class="cpp plain">}</code></div>
 <p><img src="https://cdn.discordapp.com/attachments/1171614822417301617/1194133666662719548/image.png?ex=65af3ea4&amp;is=659cc9a4&amp;hm=a69317ef504d59560904c1505b52f8fec048b6ab148a382ec613d4547118438e&amp;"/><br/><span></span></p>
-<p></p>
-<p></p>
+<h1>C_EX</h1>
+<h2><span>EX1</span></h2>
+<p><span>#include &lt;stdio.h&gt;<br/>int main()<br/>{<br/>int a = 10, b = 5;<br/>printf( " a == b is %d \n", a == b );<br/>printf( " a &gt; b is %d \n", a &gt; b );<br/>printf( " a &lt; b is %d \n", a &lt; b );<br/>printf( " a &gt;= b is %d \n", a &gt;= b );<br/>printf( " a &lt;= b is %d \n", a &lt;= b );<br/>printf( " a != b is %d \n", a != b );<br/>printf( "\n" );<br/>b = 10;<br/>printf( " a == b is %d \n", a == b );<br/>printf( " a &gt; b is %d \n", a &gt; b );<br/>printf( " a &lt; b is %d \n", a &lt; b );<br/>printf( " a &gt;= b is %d \n", a &gt;= b );<br/>printf( " a &lt;= b is %d \n", a &lt;= b );<br/>printf( " a != b is %d \n", a != b );<br/>return 0;<br/>}</span></p>
+<p><span><img src="https://cdn.discordapp.com/attachments/1171614822417301617/1194139864564772884/image.png?ex=65af4469&amp;is=659ccf69&amp;hm=25fe75829234ab588984000fc40c8d395c6085a6394cf2815066fcc978ce46dd&amp;"/></span></p>
+<h2><span>EX2</span></h2>
+<p><span>#include&lt;stdio.h&gt;<br/>void main()<br/>{<br/>int a,b;<br/>a = 15;<br/>b = 1;<br/>printf("%d \n", a | b ); /* a OR b */<br/>printf("%d \n", a &amp; b ); /* a AND b */<br/>printf("%d \n", a ^ b ); /* a XOR b */<br/>printf("%d \n", a &lt;&lt; 1 ); /* a 位元左移 1 位 */<br/>printf("%d \n", a &gt;&gt; 1 ); /* a 位元右移一位 */<br/>printf("%d \n", ~a ); /* A 的補數運算 */<br/>}</span></p>
+<p><span></span></p>
+<h2><span>EX3</span></h2>
+<p><span>#include&lt;stdio.h&gt;<br/>int main()<br/>{<br/>int a,b;<br/>a = 10; b = 3;<br/>printf( "%d \n", a * b );<br/>printf( "%d \n", a / b );<br/>printf( "%d \n", a + b );<br/>printf( "%d \n", a - b );<br/>printf( "%d \n", a % b );<br/>return 0;<br/>}</span></p>
+<p><span></span></p>
+<h2><span>EX4</span></h2>
+<p><span>#include &lt;stdio.h&gt;<br/>int main()<br/>{<br/>char x, y;<br/>x = 'a';<br/>y = (char)97;<br/>/* 輸出 x, y, x, 最後一個是以 ASCII 值顯示 y */<br/>printf( " x = %c, y = %c, ASCII of y = %d", x, y, y );<br/>return 0;<br/>}</span></p>
+<p><span></span></p>
+<h2><span>EX5</span></h2>
+<p><span>#include &lt;stdio.h&gt;<br/>/* read and display a number */<br/>int main () {<br/> char c;<br/> printf("Enter character: ");<br/> c = getchar(); /* read the character in */<br/> printf("Character entered: ");<br/> putchar(c); /* write the character */<br/> return(0);<br/>}</span></p>
+<p><span></span></p>
+<h2><span>EX6</span></h2>
+<p><span>#include &lt;stdio.h&gt;<br/>int main()<br/>{<br/>int a = 1;<br/>int A = 8;<br/>int b = 2, c;<br/>c = A - a + b;<br/>/* 輸出 a, A, b, c 到螢幕 */<br/>printf( "a = %d, A = %d, b = %d, c = %d ", a, A, b, c );<br/>return 0;<br/>}</span></p>
+<p><span></span></p>
+<h2><span>EX7</span></h2>
+<p><span>#include &lt;stdio.h&gt;<br/>float circle( int r ); /* 宣告 circle 的 prototype */<br/>void main(){<br/>float answer;<br/>answer = circle(8);<br/>printf( " 圓周長度是 %f", answer );<br/>}<br/>/* ====================<br/> circle 函數, 計算 circle 的圓周長<br/>==================== */<br/>float circle( int r )<br/>{<br/>float result;<br/>result = 3.14159 * (double)2 * r;<br/>return ( result );<br/>}</span></p>
+<h2><span>EX8</span></h2>
+<p><span>#include &lt;stdio.h&gt;<br/>void main()<br/>{<br/>printf("%d\n", 1 &amp;&amp; 3 );<br/>printf("%d\n", 0 &amp;&amp; 0 );<br/>printf("%d\n", 2 &amp;&amp; 2 );<br/>}</span></p>
+<p><span> </span></p>
+<h2><span>EX9</span></h2>
+<p><span>#include &lt;stdio.h&gt;<br/>void main()<br/>{<br/>int a;<br/>a = 3;<br/>printf("%d\n", !a );<br/>a = 0;<br/>printf("%d\n", !a );<br/>}</span></p>
+<span></span>
+<span></span>
+<h2><span>EX10</span></h2>
+<p><span>#include &lt;stdio.h&gt;<br/>int main()<br/>{<br/>/* 印出 Hello World! Bye Bye */<br/>printf("Hello World! ");<br/>printf("Bye ");<br/>printf("Bye");<br/>return 0;<br/>}</span></p>
+<p><span></span></p>
 <p></p>
 <p></p>
 <p></p>

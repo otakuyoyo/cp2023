@@ -866,8 +866,25 @@ void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
 <div class="line number34 index33 alt1"><code class="cpp plain">}</code></div>
 <p><span><img src="https://cdn.discordapp.com/attachments/1171614822417301617/1194132961088524328/image.png?ex=65af3dfb&amp;is=659cc8fb&amp;hm=8954d0d5d9e6206442b5f0519c1ce9fbe07085b7f4284372172743a4a23c6039&amp;"/></span></p>
 <h2><span>C10.</span></h2>
-<p><span></span></p>
-<p></p>
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#define N 10</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number5 index4 alt2"><code class="cpp spaces">  </code><code class="cpp color1 bold">char</code> <code class="cpp plain">chr;</code></div>
+<div class="line number6 index5 alt1"><code class="cpp spaces">  </code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"\n"</code><code class="cpp plain">);</code></div>
+<div class="line number7 index6 alt2"><code class="cpp spaces">  </code> </div>
+<div class="line number8 index7 alt1"><code class="cpp spaces">  </code><code class="cpp comments">// Loop through ASCII values from 65 ('A') to 122 ('z')</code></div>
+<div class="line number9 index8 alt2"><code class="cpp spaces">  </code><code class="cpp keyword bold">for</code> <code class="cpp plain">(chr = 65; chr &lt;= 122; chr = chr + 1) {</code></div>
+<div class="line number10 index9 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Exclude characters between 'Z' and 'a'</code></div>
+<div class="line number11 index10 alt2"><code class="cpp spaces">    </code><code class="cpp keyword bold">if</code> <code class="cpp plain">(chr &gt; 90 &amp;&amp; chr &lt; 97)</code></div>
+<div class="line number12 index11 alt1"><code class="cpp spaces">      </code><code class="cpp keyword bold">continue</code><code class="cpp plain">;</code></div>
+<div class="line number13 index12 alt2"><code class="cpp spaces">      </code> </div>
+<div class="line number14 index13 alt1"><code class="cpp spaces">    </code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"[%2d-%c] "</code><code class="cpp plain">, chr, chr);</code></div>
+<div class="line number15 index14 alt2"><code class="cpp spaces">  </code><code class="cpp plain">}</code></div>
+<div class="line number16 index15 alt1"><code class="cpp spaces">  </code> </div>
+<div class="line number17 index16 alt2"><code class="cpp spaces">  </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number18 index17 alt1"><code class="cpp plain">}</code></div>
+<p><img src="https://cdn.discordapp.com/attachments/1171614822417301617/1194133666662719548/image.png?ex=65af3ea4&amp;is=659cc9a4&amp;hm=a69317ef504d59560904c1505b52f8fec048b6ab148a382ec613d4547118438e&amp;"/><br/><span></span></p>
 <p></p>
 <p></p>
 <p></p>
