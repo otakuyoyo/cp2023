@@ -143,7 +143,10 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">C1. << <a href='C1..html'>Previous</a> <a href='C3..html'>Next</a> >> C3.<br /><h1>C2.</h1>
-<p><span></span></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main(int argc, char** argv) {<br/> // Check for C standard version<br/> #if __STDC_VERSION__ &gt;= 201710L<br/> printf("We are using C18!\n");<br/> #elif __STDC_VERSION__ &gt;= 201112L<br/> printf("We are using C11!\n");<br/> #elif __STDC_VERSION__ &gt;= 199901L<br/> printf("We are using C99!\n");<br/> #else<br/> printf("We are using C89/C90!\n");<br/> #endif</p>
+<p>// Indicate successful execution<br/> return 0;<br/>}</p>
+<p><span><img src="https://cdn.discordapp.com/attachments/963593522328518706/1194122755319283782/image.png?ex=65af347a&amp;is=659cbf7a&amp;hm=440fc4c505bf5fdb4603df66ba8f3ea3bf4b39ee37b970903fdd0b20feb69691&amp;"/></span></p>
 <br />C1. << <a href='C1..html'>Previous</a> <a href='C3..html'>Next</a> >> C3.</div>
         
     <!-- footer -->
