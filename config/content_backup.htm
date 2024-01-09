@@ -709,7 +709,10 @@ void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
 <p>// Indicate successful execution<br/>return(0);<br/>}</p>
 <p><img src="https://cdn.discordapp.com/attachments/963593522328518706/1194121496772223029/11301091.png?ex=65af334e&amp;is=659cbe4e&amp;hm=9dae5882ae9bb2cee8c648e4fbb9c48ba7d27cf0a9d989f8b0abbe23327cd2ef&amp;"/></p>
 <h2><span>C2.</span></h2>
-<p><span></span></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main(int argc, char** argv) {<br/> // Check for C standard version<br/> #if __STDC_VERSION__ &gt;= 201710L<br/> printf("We are using C18!\n");<br/> #elif __STDC_VERSION__ &gt;= 201112L<br/> printf("We are using C11!\n");<br/> #elif __STDC_VERSION__ &gt;= 199901L<br/> printf("We are using C99!\n");<br/> #else<br/> printf("We are using C89/C90!\n");<br/> #endif</p>
+<p>// Indicate successful execution<br/> return 0;<br/>}</p>
+<p><span><img src="https://cdn.discordapp.com/attachments/963593522328518706/1194122755319283782/image.png?ex=65af347a&amp;is=659cbf7a&amp;hm=440fc4c505bf5fdb4603df66ba8f3ea3bf4b39ee37b970903fdd0b20feb69691&amp;"/></span></p>
 <h2><span>C3.</span></h2>
 <p><span></span></p>
 <h2><span>C4.</span></h2>
