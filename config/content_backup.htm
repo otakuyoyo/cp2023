@@ -43,7 +43,8 @@ brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 <p>從 1 累加到 100:</p>
 <p><button id="add1to100">1 add to 100</button></p>
 <p>將 iterable 與 iterator <a href="https://home.gamer.com.tw/creationDetail.php?sn=4337438">相關說明</a>, 利用 Brython 與 Ace Editor 整理在這個頁面.</p>
-<h1>W3</h1>
+<h1>作業內容</h1>
+<h2>W3</h2>
 <p>利用已經帶有 Brython 執行環境的倉儲, 在設定學員 Github Classroom 首次作業時, 即經由 template 置入, 因此學員只要:</p>
 <p>利用學校 email 帳號, 建立 Github 帳號, 以英文姓名縮寫加上一組數字, 選擇最短帳號名稱 例如: jfk40723199, jfk 為其自選的姓名縮寫, 而隨後則加上各自的學號.</p>
 <p>擁有 Github 帳號後, 即可透過 Github Classroom assignment 連結取得作業倉儲, 自行在倉儲中設定 Github Pages 後, 即可啟用作業網站 (以下<span> </span><span>所謂<span>網站均指靜態網站</span><span> </span></span>, 而用來編輯網站內容的<span>動態網站, 則統稱為網際內容編輯器</span>, 使用動態網站的目的在編輯靜態網站的內容). 網站內容經過編輯之後, 必須建立新的網站內容 (使用 generate_pages), 然後將新的網站內容更新到對應的 Github 倉儲中 (稱為改版, 其過程經歷 git add, git commit 與 git push 等階段).</p>
@@ -56,7 +57,7 @@ brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 <p><img alt="" height="400" src="https://mde.tw/cpnote/images/mdecp2023_replit_requests.png" width="516"/></p>
 <p>(上圖顯示共有三名用戶針對 mdecp2023 帳號下的 Github Classroom 倉儲提出 Replit 連線要求, 其中只有最上方用戶的 request 取得 mdecp2023/site-scrum-1 倉儲的維護權限, 其餘兩則 requests 則仍處於待審核階段. 意即若要讓各用戶整合 Replit,<span> </span><span>每一個 Github Classroom 作業, 管理者都必須手動處理超過兩百則的 requests</span>)</p>
 <p>為去除管理者的手動設定負擔, 決定 2023 cp 與 cad 等課程將放棄使用 Github Classroom. 改為由各學員自行針對課程建立用來評分的課程倉儲與網站 (cp 課程建立 cp2023 倉儲, cad 課程則建立 cad2023 倉儲), 直接附屬在學員的 Github 帳號下, 後續的 submodule 設定與倉儲協同權限則統一由各學員自行負責</p>
-<h1>W4</h1>
+<h2>W4</h2>
 <p><span>各學員自行建立線上考試帳號</span></p>
 <p><span>依據<span> </span><a href="https://qry.nfu.edu.tw/teacher.php?selyr=1121&amp;teacher=%E5%9A%B4%E5%AE%B6%E9%8A%98">112 學年度第一學期教師授課表</a>中的學員修課名單, 利用 Teams 中的 Excel 取學員 Github 帳號.</span></p>
 <p><span>各學員自行建立 Github 評分倉儲 cp2023, 並設定 Github Pages</span></p>
@@ -179,7 +180,7 @@ doc["add1to100"].bind('click', add)
 <!-- editor1 開始 -->
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;">
-<h1>w5</h1>
+<h2>w5</h2>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">// 包含標準輸出入程式庫的標頭文件
 // https://blog.csdn.net/weixin_38468077/article/details/101069365
 // http://www.gnuplot.info/demo/
@@ -345,7 +346,7 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <!-- editor2 開始 -->
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor2" style="width: 600px; height: 300px;">
-<h1>w6</h1>
+<h2>w6</h2>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
 #include &lt;math.h&gt;
@@ -671,7 +672,7 @@ void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
 }
 </pre>
 <p><img alt="" height="200" src="/images/japan_flag.png" width="300"/><br/><br/></p>
-<h1>W7</h1>
+<h2>W7</h2>
 <p>Map: site map 網站所有頁面</p>
 <p>EditA: edit all pages, 使用時機為(1)解決多人共用網站時的衝突, 或(2)刪除特定頁面</p>
 <p>Edit: edit one page, 先選頁面, 再選 Edit 然後才能進入編輯模式</p>
@@ -684,7 +685,7 @@ void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
 <p>Logout: 登出</p>
 <p>Convert: 將 config/content.htm 經過分頁程式處理後, 轉為 content 目錄下的超文件</p>
 <p></p>
-<h1>W10</h1>
+<h2>W10</h2>
 <p>線上簡報、網誌與多媒體影片製作工具:</p>
 <p><a href="https://leo-editor.github.io/leo-editor/">Leo Editor</a><span> </span>(<a href="https://groups.google.com/g/leo-editor">討論群組</a>) 為大綱管理系統, 可以當作程式開發的 IDE (Integrated Development Environment) 使用, 可用來編輯 reveal.js 簡報檔案中的 html 與 markdown, 也可用來編輯 Pelican 網誌 markdown 與轉檔, 並且在電腦輔助設計與分析過程中, 可以用來解讀 CoppeliaSim XML 格式檔案.</p>
 <p>因為 Python 3.12.0 環境下 Leo Editor 還無法正常透過 pip 安裝, 因此必須手動安裝 PyQt5 之後, 再使用 pip install leo, 所完成的 Python 3.12.0: <a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EYf6RiAqXAFJllAizi_-iZ4BT9ZEn8-bT2V8TVjd9p446Q?e=NSCciC">Python312_leo_664_PyQt5.7z</a><span> </span>(需要下載密碼)</p>
@@ -693,7 +694,7 @@ void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
 <p><a href="https://github.com/obsproject/obs-studio/releases">OBS</a><span> </span>為電腦廣播製作系統, 可以結合各種語音、圖像與影片製作出多元的電腦操作說明影片.</p>
 <p>Wink 與 ShareX 都需要<span> </span><a href="https://ffmpeg.org/download.html#build-windows">ffmpeq.exe</a>.</p>
 <p></p>
-<h1>W13</h1>
+<h2>W13</h2>
 <p>一開始學習計算機程式這門課程時，我感到非常困惑，因為我對C語言一無所知。老師的講課速度很快，而我自己的學習反應較慢，因此需要花更多的時間來理解課堂內容。特別是初次接觸Replit與GitHub時，我感到有些迷失，不知道如何進一步進行課程。</p>
 <p>然而，透過多次觀看老師的教學影片、向同組同學和其他組的同學請教，我終於成功地設定了Replit和GitHub帳號，並完成了老師指定的作業。這個過程讓我對程式語言有了更深入的認識，並且漸漸克服了一開始的困難。</p>
 <p></p>
