@@ -830,7 +830,41 @@ void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
 <div class="line number16 index15 alt1"><code class="cpp plain">}</code></div>
 <p><span><img src="https://cdn.discordapp.com/attachments/1171614822417301617/1194131906267197560/image.png?ex=65af3d00&amp;is=659cc800&amp;hm=af8a8b6d7d8ab274d2478eb86f0a2453b2ec8e83fe2c6a7992b32f8d6fa225d7&amp;"/></span></p>
 <h2><span>C9.</span></h2>
-<p><span></span></p>
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number3 index2 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">i, j, flag, ip = 0;</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Print a message indicating the purpose of the program</code></div>
+<div class="line number6 index5 alt1"><code class="cpp spaces">    </code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"The prime numbers between 1 and 199 are:\n"</code><code class="cpp plain">);</code></div>
+<div class="line number7 index6 alt2"> </div>
+<div class="line number8 index7 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Loop to check prime numbers from 2 to 198</code></div>
+<div class="line number9 index8 alt2"><code class="cpp spaces">    </code><code class="cpp keyword bold">for</code> <code class="cpp plain">(i = 2; i &lt; 199; i++) {</code></div>
+<div class="line number10 index9 alt1"><code class="cpp spaces">        </code><code class="cpp plain">flag = 1;</code></div>
+<div class="line number11 index10 alt2"> </div>
+<div class="line number12 index11 alt1"><code class="cpp spaces">        </code><code class="cpp comments">// Loop to check if i is divisible by any number other than 1 and itself</code></div>
+<div class="line number13 index12 alt2"><code class="cpp spaces">        </code><code class="cpp keyword bold">for</code> <code class="cpp plain">(j = 2; j &lt;= i / 2 &amp;&amp; flag == 1; j++) {</code></div>
+<div class="line number14 index13 alt1"><code class="cpp spaces">            </code><code class="cpp keyword bold">if</code> <code class="cpp plain">(i % j == 0) {</code></div>
+<div class="line number15 index14 alt2"><code class="cpp spaces">                </code><code class="cpp plain">flag = 0;</code></div>
+<div class="line number16 index15 alt1"><code class="cpp spaces">            </code><code class="cpp plain">}</code></div>
+<div class="line number17 index16 alt2"><code class="cpp spaces">        </code><code class="cpp plain">}</code></div>
+<div class="line number18 index17 alt1"> </div>
+<div class="line number19 index18 alt2"><code class="cpp spaces">        </code><code class="cpp comments">// If i is prime, print it</code></div>
+<div class="line number20 index19 alt1"><code class="cpp spaces">        </code><code class="cpp keyword bold">if</code> <code class="cpp plain">(flag == 1) {</code></div>
+<div class="line number21 index20 alt2"><code class="cpp spaces">            </code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"%5d "</code><code class="cpp plain">, i);</code></div>
+<div class="line number22 index21 alt1"><code class="cpp spaces">            </code><code class="cpp plain">ip++;</code></div>
+<div class="line number23 index22 alt2"> </div>
+<div class="line number24 index23 alt1"><code class="cpp spaces">            </code><code class="cpp comments">// Print a newline character after every 10 prime numbers</code></div>
+<div class="line number25 index24 alt2"><code class="cpp spaces">            </code><code class="cpp keyword bold">if</code> <code class="cpp plain">(ip % 10 == 0) {</code></div>
+<div class="line number26 index25 alt1"><code class="cpp spaces">                </code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"\n"</code><code class="cpp plain">);</code></div>
+<div class="line number27 index26 alt2"><code class="cpp spaces">            </code><code class="cpp plain">}</code></div>
+<div class="line number28 index27 alt1"><code class="cpp spaces">        </code><code class="cpp plain">}</code></div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">    </code><code class="cpp plain">}</code></div>
+<div class="line number30 index29 alt1"> </div>
+<div class="line number31 index30 alt2"><code class="cpp spaces">    </code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"\n"</code><code class="cpp plain">);</code></div>
+<div class="line number32 index31 alt1"> </div>
+<div class="line number33 index32 alt2"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number34 index33 alt1"><code class="cpp plain">}</code></div>
+<p><span><img src="https://cdn.discordapp.com/attachments/1171614822417301617/1194132961088524328/image.png?ex=65af3dfb&amp;is=659cc8fb&amp;hm=8954d0d5d9e6206442b5f0519c1ce9fbe07085b7f4284372172743a4a23c6039&amp;"/></span></p>
 <h2><span>C10.</span></h2>
 <p><span></span></p>
 <p></p>
